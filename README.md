@@ -1,2 +1,0 @@
-# sobekyll.github.io
-Sobekyll
