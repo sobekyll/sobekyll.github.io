@@ -35,6 +35,9 @@ plugins:
   - jekyll-paginate
   # - jekyll-feed
 
+markdown: kramdown
+highlighter: rouge
+
 pagination:
   enabled: true
   per_page: 5
