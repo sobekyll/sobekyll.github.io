@@ -32,6 +32,7 @@ gem "wdm", "~> 0.1", :platforms => [:mingw, :x64_mingw, :mswin]
 # do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
-gem 'sobekyll', '~> 0.1.0'
+gem 'sobekyll', '~> 0.1.1'
+# gem 'sobekyll', path: '../sobekyll/'
 
 gem 'jekyll-paginate'
