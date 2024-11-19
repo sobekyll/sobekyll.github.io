@@ -7,7 +7,7 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 3.10.0"
+gem "jekyll", "~> 4.3.4"
 gem "webrick", "~> 1.7"   # 解决 Jekyll serve 在某些环境下的依赖问题
 gem "kramdown-parser-gfm"
 gem 'rouge'
