@@ -7,8 +7,9 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 4.3.4"
+gem "jekyll", "~> 3.10.0"
 gem "webrick", "~> 1.7"   # 解决 Jekyll serve 在某些环境下的依赖问题
+gem "kramdown-parser-gfm"
 gem 'rouge'
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
@@ -33,7 +34,7 @@ gem "wdm", "~> 0.1", :platforms => [:mingw, :x64_mingw, :mswin]
 # do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
-gem 'sobekyll', '~> 0.1.1'
+gem 'sobekyll', '~> 0.1.2'
 # gem 'sobekyll', path: '../sobekyll/'
 
 gem 'jekyll-paginate'
