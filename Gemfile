@@ -36,3 +36,6 @@ gem 'sobekyll', '~> 0.1.1'
 # gem 'sobekyll', path: '../sobekyll/'
 
 gem 'jekyll-paginate'
+gem "webrick", "~> 1.7"   # 解决 Jekyll serve 在某些环境下的依赖问题
+gem 'rouge'
+gem "jekyll-paginate"
