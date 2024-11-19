@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/rouge-github-auto.css' | relative_url }}">
+  <script src="https://unpkg.com/sober@0.6.8/dist/sober.min.js"></script>
+
+  <script src="{{ '/assets/js/sobekyll.js' }}"></script>
+</head>
+
+<body>
+  <s-page theme="auto">
+    <s-drawer id="drawer">
+      <div slot="start">
+        <div style="width: 100%; height: 200px; background-color: aqua;">
+
+        </div>
+        <s-menu style="max-width: 280px">
+          <div slot="label">控制台</div>
+          <s-menu-item checked="true">
+            <s-icon slot="start" type="home"></s-icon>
+            选项1
+          </s-menu-item>
+          <s-menu-item>
+            <s-icon slot="start" type="search"></s-icon>
+            选项2
+            <s-icon slot="end" type="add"></s-icon>
+          </s-menu-item>
+          <s-menu-item>
+            <s-icon slot="start" type="light_mode"></s-icon>
+            选项3
+          </s-menu-item>
+          <s-menu-item>
+            <s-icon slot="start" type="favorite"></s-icon>
+            选项4
+            <s-menu slot="menu">
+              <s-menu-item> 选项1 </s-menu-item>
+              <s-menu-item> 选项2 </s-menu-item>
+            </s-menu>
+          </s-menu-item>
+          <s-menu-item>
+            <s-icon slot="start" type="add"></s-icon>
+            选项5
+          </s-menu-item>
+        </s-menu>
+        <s-menu style="max-width: 280px">
+          <div slot="label">其他</div>
+          <s-menu-item> 选项6 </s-menu-item>
+          <s-menu-item> 选项7 </s-menu-item>
+        </s-menu>
+      </div>
+      <main>
+        <s-appbar>
+          <s-icon-button slot="navigation" onclick="document.querySelector('#drawer').toggle()">
+            <s-icon type="menu"></s-icon>
+          </s-icon-button>
+           <!-- onclick="window.open('{{ site.url }}', '_self')" -->
+          <a class="app-bar-title" slot="headline" href="{{ site.url }}" > {{ site.title }} </a>
+        </s-appbar>
+        <s-scroll-view>
+          <div style="height: 100%; display: flex; flex-direction: column;">
+            <div class="content">
+              {{ content }}
+            </div>
+            <footer>
+              <p>&copy; {{ site.author }} - {{ site.time | date: '%Y' }}</p>
+            </footer>
+          </div>
+          
+        </s-scroll-view>
+      </main>
+    </s-drawer>
+  </s-page>
+</body>
+
+</html>

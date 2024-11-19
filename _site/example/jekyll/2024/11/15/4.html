@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/rouge-github-auto.css">
+  <script src="https://unpkg.com/sober@0.6.8/dist/sober.min.js"></script>
+
+  <script src="/assets/js/sobekyll.js"></script>
+</head>
+
+<body>
+  <s-page theme="auto">
+    <s-drawer id="drawer">
+      <div slot="start">
+        <div style="width: 100%; height: 200px; background-color: aqua;">
+
+        </div>
+        <s-menu style="max-width: 280px">
+          <div slot="label">控制台</div>
+          <s-menu-item checked="true">
+            <s-icon slot="start" type="home"></s-icon>
+            选项1
+          </s-menu-item>
+          <s-menu-item>
+            <s-icon slot="start" type="search"></s-icon>
+            选项2
+            <s-icon slot="end" type="add"></s-icon>
+          </s-menu-item>
+          <s-menu-item>
+            <s-icon slot="start" type="light_mode"></s-icon>
+            选项3
+          </s-menu-item>
+          <s-menu-item>
+            <s-icon slot="start" type="favorite"></s-icon>
+            选项4
+            <s-menu slot="menu">
+              <s-menu-item> 选项1 </s-menu-item>
+              <s-menu-item> 选项2 </s-menu-item>
+            </s-menu>
+          </s-menu-item>
+          <s-menu-item>
+            <s-icon slot="start" type="add"></s-icon>
+            选项5
+          </s-menu-item>
+        </s-menu>
+        <s-menu style="max-width: 280px">
+          <div slot="label">其他</div>
+          <s-menu-item> 选项6 </s-menu-item>
+          <s-menu-item> 选项7 </s-menu-item>
+        </s-menu>
+      </div>
+      <main>
+        <s-appbar>
+          <s-icon-button slot="navigation" onclick="document.querySelector('#drawer').toggle()">
+            <s-icon type="menu"></s-icon>
+          </s-icon-button>
+           <!-- onclick="window.open('http://localhost:4000', '_self')" -->
+          <a class="app-bar-title" slot="headline" href="http://localhost:4000" > Sobekyll </a>
+        </s-appbar>
+        <s-scroll-view>
+          <div style="height: 100%; display: flex; flex-direction: column;">
+            <div class="content">
+              <article>
+  <h1>Hello World</h1>
+  <p class="post-meta">
+    <s-icon style="width: 20px; height: 20px;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+        <path
+          d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z">
+        </path>
+      </svg>
+    </s-icon>
+    <small> November 15, 2024 </small>
+  </p>
+  
+  <div class="post-content">
+    <p>Article 4</p>
+
+  </div>
+  
+  <p class="post-meta">
+    
+    <s-icon style="width: 20px; height: 20px;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+        <path
+          d="m240-160 40-160H120l20-80h160l40-160H180l20-80h160l40-160h80l-40 160h160l40-160h80l-40 160h160l-20 80H660l-40 160h160l-20 80H600l-40 160h-80l40-160H360l-40 160h-80Zm140-240h160l40-160H420l-40 160Z">
+        </path>
+      </svg>
+    </s-icon>
+    
+    introduction
+    
+    demo
+    
+    <space style="margin-right: 8px;"></space>
+    
+
+    
+    <s-icon style="width: 20px; height: 20px;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+        <path
+          d="m260-520 220-360 220 360H260ZM700-80q-75 0-127.5-52.5T520-260q0-75 52.5-127.5T700-440q75 0 127.5 52.5T880-260q0 75-52.5 127.5T700-80Zm-580-20v-320h320v320H120Zm580-60q42 0 71-29t29-71q0-42-29-71t-71-29q-42 0-71 29t-29 71q0 42 29 71t71 29Zm-500-20h160v-160H200v160Zm202-420h156l-78-126-78 126Zm78 0ZM360-340Zm340 80Z">
+        </path>
+      </svg>
+    </s-icon>
+    
+    example
+    
+    jekyll
+    
+    
+  </p>
+</article>
+            </div>
+            <footer>
+              <p>&copy; Your Name - 2024</p>
+            </footer>
+          </div>
+          
+        </s-scroll-view>
+      </main>
+    </s-drawer>
+  </s-page>
+</body>
+
+</html>
