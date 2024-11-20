@@ -27,7 +27,6 @@ markdown: kramdown
 theme: null
 include:
   - _themes
-  - _includes
 
 theme_dir: _themes
 theme_assets: _themes/sobekyll/assets
