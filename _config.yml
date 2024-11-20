@@ -26,7 +26,16 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-theme: sobekyll
+theme: null
+include:
+  - _themes
+
+theme_dir: _themes
+theme_assets: _themes/sobekyll/assets
+layouts_dir: _themes/sobekyll/_layouts
+includes_dir: _themes/sobekyll/_includes
+sass_dir: _themes/sobekyll/_sass
+
 plugins:
   - jekyll-feed
   - jekyll-paginate

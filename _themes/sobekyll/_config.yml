@@ -1,0 +1,13 @@
+title: "Sobekyll"
+description: "A custom Jekyll theme"
+baseurl: "" # 设置为空或指定子目录路径
+author: "Your Name"
+
+plugins:
+  - jekyll-paginate
+
+markdown: kramdown
+highlighter: rouge
+
+paginate: 5   # 每页显示的文章数量
+paginate_path: "/page:num/"  # 分页路径，:num 会被页码替换
