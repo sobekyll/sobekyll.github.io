@@ -39,7 +39,10 @@ plugins:
   - jekyll-paginate
 
 markdown: kramdown
-highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+# highlighter: rouge
 
 paginate: 5   # 每页显示的文章数量
 paginate_path: "/page:num/"  # 分页路径，:num 会被页码替换

@@ -7,8 +7,8 @@
   
   <title>{{ page.title | default: site.title }}</title>
   <link rel="stylesheet" href="{% if site.theme_assets %}{{ site.theme_assets | absolute_url }}/css/style.css{% else %}{{ '/assets/css/style.css' | absolute_url }}{% endif %}">
-
   <link rel="stylesheet" href="{% if site.theme_assets %}{{ site.theme_assets | absolute_url }}/css/rouge-github-auto.css{% else %}{{ '/assets/css/rouge-github-auto.css' | relative_url }}{% endif %}">
+  <link rel="stylesheet" href="{% if site.theme_assets %}{{ site.theme_assets | absolute_url }}/css/github-markdown.css{% else %}{{ '/assets/css/github-markdown.css' | relative_url }}{% endif %}">
 
   <script src="https://unpkg.com/sober@0.6.8/dist/sober.min.js"></script>
 

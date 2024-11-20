@@ -1,9 +1,8 @@
-/* @import "../../_sass/_base.scss"; */
-
 :root {
     --border-width: max(1px, 0.0625rem);
 }
 
+/* 基础样式 */
 html, body {
     width: 100%;
     height: 100%;
@@ -18,8 +17,9 @@ s-page {
 }
 
 .author {
-    width: 100%; 
-    height: 256px;
+    width: 100%;
+    height: auto; /* 适应内容高度 */
+    padding: 16px; /* 为小屏幕添加内边距 */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,16 +27,17 @@ s-page {
 }
 
 .author-avatar {
-    width: 80px; 
-    height: 80px;
+    width: 60px; /* 缩小头像以适应移动端 */
+    height: 60px;
     border: 1px var(--s-color-outline-variant) solid;
-    border-radius: 40px;
+    border-radius: 50%; /* 保持圆形 */
     object-fit: cover;
 }
 
 .author-name {
     margin-top: 8px;
     font-weight: bold;
+    font-size: 1rem; /* 缩小字体 */
 }
 
 main {
@@ -47,10 +48,12 @@ main {
 .app-bar-title {
     font-weight: bold;
     text-decoration: none;
+    font-size: 1.25rem; /* 确保标题清晰 */
 }
 
 .app-bar-action {
     border-radius: 4px;
+    padding: 8px; /* 增加触控区域 */
 }
 
 main s-scroll-view {
@@ -62,26 +65,28 @@ main s-scroll-view {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 24px;
+    padding: 16px; /* 减少内边距以适配小屏 */
 }
 
 .post-item {
-    margin-bottom: 20px;
+    margin-bottom: 16px; /* 减小间距 */
     border-bottom: var(--border-width) solid var(--s-color-outline-variant);
+    padding-bottom: 8px; /* 添加间距以区分内容 */
 }
 
 .post-item-title {
     color: var(--color-on-background);
     text-decoration: none;
+    font-size: 1.25rem; /* 调整标题大小 */
 }
 
 .post-item h3 {
-    font-size: 1.5em;
+    font-size: 1.25rem;
     margin: 0;
 }
 
 .post-meta {
-    font-size: 0.9em;
+    font-size: 0.875rem; /* 缩小字体 */
     color: gray;
 }
 
@@ -92,7 +97,8 @@ main s-scroll-view {
 }
 
 .post-excerpt {
-    font-size: 1em;
+    font-size: 1rem;
+    margin-top: 8px;
 }
 
 .pagination {
@@ -101,6 +107,7 @@ main s-scroll-view {
     width: 100%;
     align-items: center;
     justify-content: center;
+    padding: 8px; /* 增加触控区域 */
 }
 
 .pagination-indexing {
@@ -109,28 +116,30 @@ main s-scroll-view {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-}    
+}
 
 article {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
+
 .post-content {
+    max-width: 100%;
     flex: 1;
     border-top: var(--border-width) solid var(--s-color-outline-variant);
     border-bottom: var(--border-width) solid var(--s-color-outline-variant);
 }
 
+.markdown-body {
+    background-color: transparent;
+    min-height: 0px;
+}
+
 .highlight {
     border-radius: 8px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding: 4px;
     margin-bottom: 8px;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
 }
 
 footer a {

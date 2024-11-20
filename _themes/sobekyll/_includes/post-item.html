@@ -1,7 +1,9 @@
 <li class="post-item">
     <h3><a class="post-item-title" href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
     <div class="post-excerpt">
-        {{ post.excerpt }}
+        <div class="markdown-body" style="background-color: transparent; min-height: 0px;">
+            {{ post.excerpt }}
+        </div>
     </div>
     <p class="post-meta">
         {% include time.html date=post.date %}
