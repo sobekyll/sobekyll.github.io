@@ -1,0 +1,32 @@
+<s-appbar>
+    <s-icon-button slot="navigation" onclick="document.querySelector('#drawer').toggle()">
+        <s-icon type="menu"></s-icon>
+    </s-icon-button>
+    <!-- onclick="window.open('{{ site.url }}', '_self')" -->
+    <a class="app-bar-title" slot="headline" href="{{ site.url }}"> {{ site.title }} </a>
+
+    <s-popup-menu slot="action">
+        <s-button type="text" slot="trigger" class="app-bar-action">
+            Tags
+            <s-icon type="arrow_drop_down" slot="end"></s-icon>
+        </s-button>
+
+        {% if site.tags and site.tags.size > 0 %}
+        {% for tag in site.tags %}
+        <s-popup-menu-item onclick="selfOpen('/tags/{{ tag[0] | slugify }}')">{{ tag[0] }}</s-popup-menu-item>
+        {% endfor %}
+        {% endif %}
+    </s-popup-menu>
+
+    <s-popup-menu slot="action">
+        <s-button type="text" slot="trigger" class="app-bar-action">
+            Categories
+            <s-icon type="arrow_drop_down" slot="end"></s-icon>
+        </s-button>
+        {% if site.categories and site.categories.size > 0 %}
+        {% for category in site.categories %}
+        <s-popup-menu-item onclick="selfOpen('/categories/{{ category[0] | slugify }}')">{{ category[0] }}</s-popup-menu-item>
+        {% endfor %}
+        {% endif %}
+    </s-popup-menu>
+</s-appbar>

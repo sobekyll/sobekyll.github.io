@@ -26,6 +26,10 @@ main {
     text-decoration: none;
 }
 
+.app-bar-action {
+    border-radius: 4px;
+}
+
 main s-scroll-view {
     flex-grow: 1;
 }
@@ -59,7 +63,6 @@ main s-scroll-view {
 
 .post-excerpt {
     font-size: 1em;
-    color: #555;
 }
 
 .pagination {

@@ -10,7 +10,7 @@ layout: default
 <div class="pagination">
   {% if paginator.previous_page %}
   <s-icon-button>
-    <s-icon type="chevron_left" onclick="window.open('{{ paginator.previous_page_path }}', '_self')"></s-icon>
+    <s-icon type="chevron_left" onclick="selfOpen('{{ paginator.previous_page_path }}')"></s-icon>
   </s-icon-button>
   {% endif %}
 
@@ -23,7 +23,7 @@ layout: default
     {% if page == paginator.page %}
     <span style="margin: 8px; font-weight: bolder;">{{ page }}</span>
     {% else %}
-    <s-ripple style="border-radius: 4px;" onclick="window.open('{{ page_link }}', '_self')">
+    <s-ripple style="border-radius: 4px;" onclick="selfOpen('{{ page_link }}')">
       <span style="margin: 8px;">{{ page }}</span>
     </s-ripple>
     {% endif %}
@@ -32,7 +32,7 @@ layout: default
 
   {% if paginator.next_page %}
   <s-icon-button>
-    <s-icon type="chevron_right" onclick="window.open('{{ paginator.next_page_path }}', '_self')"></s-icon>
+    <s-icon type="chevron_right" onclick="selfOpen('{{ paginator.next_page_path }}')"></s-icon>
   </s-icon-button>
   {% endif %}
 </div>

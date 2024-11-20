@@ -6,3 +6,7 @@ function onPageLoad() {
     //     });
     // });
 }
+
+function selfOpen(url) {
+    window.open(url, '_self');
+}
