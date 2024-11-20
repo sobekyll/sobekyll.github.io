@@ -123,6 +123,8 @@ article {
 
 .post-content {
     max-width: 100%;
+    margin-top: 8px;
+    margin-bottom: 8px;
     flex: 1;
     border-top: var(--border-width) solid var(--s-color-outline-variant);
     border-bottom: var(--border-width) solid var(--s-color-outline-variant);
