@@ -61,6 +61,12 @@ main s-scroll-view {
     color: gray;
 }
 
+.post-meta a {
+    font-weight: bold;
+    color: var(--color-on-surface-variant);
+    text-decoration: none;
+}
+
 .post-excerpt {
     font-size: 1em;
 }
