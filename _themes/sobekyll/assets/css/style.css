@@ -18,8 +18,7 @@ s-page {
 
 .author {
     width: 100%;
-    height: auto; /* 适应内容高度 */
-    padding: 16px; /* 为小屏幕添加内边距 */
+    height: 256px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,12 +47,11 @@ main {
 .app-bar-title {
     font-weight: bold;
     text-decoration: none;
-    font-size: 1.25rem; /* 确保标题清晰 */
+    font-size: 1.25rem;
 }
 
 .app-bar-action {
     border-radius: 4px;
-    padding: 8px; /* 增加触控区域 */
 }
 
 main s-scroll-view {
@@ -65,7 +63,7 @@ main s-scroll-view {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 16px; /* 减少内边距以适配小屏 */
+    padding: 24px; /* 减少内边距以适配小屏 */
 }
 
 .post-item {
@@ -107,7 +105,6 @@ main s-scroll-view {
     width: 100%;
     align-items: center;
     justify-content: center;
-    padding: 8px; /* 增加触控区域 */
 }
 
 .pagination-indexing {
