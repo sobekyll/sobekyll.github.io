@@ -1,44 +1,46 @@
-<div slot="start">
-    {% if site.author %}
-    <div class="author">
-        <img class="author-avatar" src="{{ site.author.avatar }}">
-        <span class="author-name">{{ site.author.name }}</span>
-    </div>
-    {% else %}
-    Not Exist
-    {% endif %}
-    {% if site.menus %}
-    <s-divider style="padding: 0px; margin: 0px;"></s-divider>
-    {% for menu in site.menus %}
-    <s-menu style="width: 100%;">
-        {% if menu.title %}
-        <div slot="label">{{ menu.title }}</div>
+<s-scrollview slot="start">
+    <div>
+        {% if site.author %}
+        <div class="author">
+            <img class="author-avatar" src="{{ site.author.avatar }}">
+            <span class="author-name">{{ site.author.name }}</span>
+        </div>
+        {% else %}
+        Not Exist
         {% endif %}
-        {% if menu.items %}
-        {% for item in menu.items %}
-        <s-menu-item onclick="window.open('{{ item.url }}')">
-            {% if item.icon %}
-            <s-icon slot="start">
-                {{ item.icon }}
-            </s-icon>
-            {% elsif item.img %}
-            <img slot="start" src="{{ item.img }}" style="width: 32px; height: 32px; object-fit: cover;">
+        {% if site.menus %}
+        <s-divider style="padding: 0px; margin: 0px;"></s-divider>
+        {% for menu in site.menus %}
+        <s-menu style="width: 100%;">
+            {% if menu.title %}
+            <div slot="label">{{ menu.title }}</div>
             {% endif %}
+            {% if menu.items %}
+            {% for item in menu.items %}
+            <s-menu-item onclick="window.open('{{ item.url }}')">
+                {% if item.icon %}
+                <s-icon slot="start">
+                    {{ item.icon }}
+                </s-icon>
+                {% elsif item.img %}
+                <img slot="start" src="{{ item.img }}" style="width: 32px; height: 32px; object-fit: cover;">
+                {% endif %}
 
-            {{ item.title }}
-            {% if item.menu %}
-            <s-menu slot="menu">
-                {% for subItem in item.menu %}
-                <s-menu-item> {{ subItem.title }} </s-menu-item>
-                {% endfor %}
-            </s-menu>
+                {{ item.title }}
+                {% if item.menu %}
+                <s-menu slot="menu">
+                    {% for subItem in item.menu %}
+                    <s-menu-item> {{ subItem.title }} </s-menu-item>
+                    {% endfor %}
+                </s-menu>
+                {% endif %}
+            </s-menu-item>
+            {% endfor %}
             {% endif %}
-        </s-menu-item>
+        </s-menu>
         {% endfor %}
+        {% else %}
+        Not exists
         {% endif %}
-    </s-menu>
-    {% endfor %}
-    {% else %}
-    Not exists
-    {% endif %}
-</div>
+    </div>
+</s-scrollview>
