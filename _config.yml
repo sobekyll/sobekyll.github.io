@@ -77,7 +77,7 @@ menus:
       - title: AOD Volume
         img: /assets/images/AODVolume.png
       - title: JustTodo
-        img: https://github.com/boybeak/JustTodo/raw/main/resources/AppIcon.svg
+        img: /assets/images/JustTodo.png
         url: https://github.com/boybeak/JustTodo
       - title: DeskNote
         img: /assets/images/DeskNote.png

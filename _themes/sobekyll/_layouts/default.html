@@ -25,9 +25,7 @@
             <div class="content">
               {{ content }}
             </div>
-            <footer>
-              <p>&copy; {{ site.author }} - {{ site.time | date: '%Y' }}</p>
-            </footer>
+            {% include footer.html %}
           </div>
         </s-scroll-view>
       </main>

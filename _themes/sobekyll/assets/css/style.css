@@ -130,3 +130,9 @@ article {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
+
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--color-on-surface-variant);
+}
