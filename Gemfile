@@ -43,4 +43,4 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 # gem "sobekyll", path: "../sobekyll"
 gem "sobekyll", "~> 0.1.3"
 gem 'rouge'
-gem "jekyll-paginate"
+gem "jekyll-paginate", "~> 1.1.0"
