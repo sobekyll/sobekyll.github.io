@@ -1,38 +1,44 @@
 <div slot="start">
-    <div style="width: 100%; height: 200px; background-color: aqua;">
-
+    {% if site.author %}
+    <div class="author">
+        <img class="author-avatar" src="{{ site.author.avatar }}">
+        <span class="author-name">{{ site.author.name }}</span>
     </div>
-    <s-menu style="max-width: 280px">
-        <div slot="label">控制台</div>
-        <s-menu-item checked="true">
-            <s-icon slot="start" type="home"></s-icon>
-            选项1
-        </s-menu-item>
-        <s-menu-item>
-            <s-icon slot="start" type="search"></s-icon>
-            选项2
-            <s-icon slot="end" type="add"></s-icon>
-        </s-menu-item>
-        <s-menu-item>
-            <s-icon slot="start" type="light_mode"></s-icon>
-            选项3
-        </s-menu-item>
-        <s-menu-item>
-            <s-icon slot="start" type="favorite"></s-icon>
-            选项4
+    {% else %}
+    Not Exist
+    {% endif %}
+    {% if site.menus %}
+    <s-divider style="padding: 0px; margin: 0px;"></s-divider>
+    {% for menu in site.menus %}
+    <s-menu style="width: 100%;">
+        {% if menu.title %}
+        <div slot="label">{{ menu.title }}</div>
+        {% endif %}
+        {% if menu.items %}
+        {% for item in menu.items %}
+        <s-menu-item onclick="window.open('{{ item.url }}')">
+            {% if item.icon %}
+            <s-icon slot="start">
+                {{ item.icon }}
+            </s-icon>
+            {% elsif item.img %}
+            <img slot="start" src="{{ item.img }}" style="width: 32px; height: 32px; object-fit: cover;">
+            {% endif %}
+
+            {{ item.title }}
+            {% if item.menu %}
             <s-menu slot="menu">
-                <s-menu-item> 选项1 </s-menu-item>
-                <s-menu-item> 选项2 </s-menu-item>
+                {% for subItem in item.menu %}
+                <s-menu-item> {{ subItem.title }} </s-menu-item>
+                {% endfor %}
             </s-menu>
+            {% endif %}
         </s-menu-item>
-        <s-menu-item>
-            <s-icon slot="start" type="add"></s-icon>
-            选项5
-        </s-menu-item>
+        {% endfor %}
+        {% endif %}
     </s-menu>
-    <s-menu style="max-width: 280px">
-        <div slot="label">其他</div>
-        <s-menu-item> 选项6 </s-menu-item>
-        <s-menu-item> 选项7 </s-menu-item>
-    </s-menu>
+    {% endfor %}
+    {% else %}
+    Not exists
+    {% endif %}
 </div>
