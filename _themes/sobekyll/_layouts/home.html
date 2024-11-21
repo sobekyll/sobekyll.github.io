@@ -1,12 +1,19 @@
 ---
 layout: default
 ---
-
+{% if paginator %}
 <ul style="list-style: none; padding: 0; margin: 0; flex: 1;">
   {% for post in paginator.posts %}
   {% include post-item.html post=post %}
   {% endfor %}
 </ul>
+{% else %}
+<ul style="list-style: none; padding: 0; margin: 0; flex: 1;">
+  {% for post in site.posts %}
+  {% include post-item.html post=post %}
+  {% endfor %}
+</ul>
+{% endif %}
 
 <div class="pagination">
   {% if paginator.previous_page %}
