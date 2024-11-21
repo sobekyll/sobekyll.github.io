@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2024-11-21T05:35:23+00:00</updated><id>/feed.xml</id><title type="html">Sobekyll</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>boybeak</name></author><entry><title type="html">Hello Sobekyll</title><link href="/guide/2024/11/20/Hello-Sobekyll.html" rel="alternate" type="text/html" title="Hello Sobekyll" /><published>2024-11-20T02:17:05+00:00</published><updated>2024-11-20T02:17:05+00:00</updated><id>/guide/2024/11/20/Hello-Sobekyll</id><content type="html" xml:base="/guide/2024/11/20/Hello-Sobekyll.html"><![CDATA[<p><strong>SobeKyll</strong> is a material design theme for <a href="https://jekyllrb.com/">Jekyll</a>. It’s powered by <a href="https://soberjs.com/">SoberJS</a>.</p>
+
+<h2 id="installation">Installation</h2>
+<h3 id="for-github-pages">For Github Pages</h3>
+
+<p>If you’ve already have a Github Pages blog, and want to change theme to <code class="language-plaintext highlighter-rouge">Sobekyll</code>, follow these steps:</p>
+<ol>
+  <li>Clone this <a href="https://github.com/sobekyll/sobekyll.github.io">repo</a> with <code class="language-plaintext highlighter-rouge">git clone https://github.com/sobekyll/sobekyll.github.io.git</code> or just download the zip file and unzip;</li>
+  <li>Copy the <code class="language-plaintext highlighter-rouge">sobekyll</code> folder under <code class="language-plaintext highlighter-rouge">_themes</code> into your own blog’s <code class="language-plaintext highlighter-rouge">_themes</code> directory. If you don’t have a <code class="language-plaintext highlighter-rouge">_themes</code> directory, create it;</li>
+  <li>
+    <p>Add these configuration to your <code class="language-plaintext highlighter-rouge">_config.yml</code>:</p>
+
+    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="na">theme</span><span class="pi">:</span> <span class="no">null</span>
+ <span class="na">include</span><span class="pi">:</span>
+ <span class="pi">-</span> <span class="s">_themes</span>
+
+ <span class="na">theme_dir</span><span class="pi">:</span> <span class="s">_themes</span>
+ <span class="na">theme_assets</span><span class="pi">:</span> <span class="s">_themes/sobekyll/assets</span>
+ <span class="na">layouts_dir</span><span class="pi">:</span> <span class="s">_themes/sobekyll/_layouts</span>
+ <span class="na">includes_dir</span><span class="pi">:</span> <span class="s">_themes/sobekyll/_includes</span>
+ <span class="na">sass_dir</span><span class="pi">:</span> <span class="s">_themes/sobekyll/_sass</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>If you want to create a new blog and deploy it to <strong>Github Pages</strong>, follow these steps:</p>
+<ol>
+  <li>Clone this <a href="https://github.com/sobekyll/sobekyll.github.io">repo</a> with <code class="language-plaintext highlighter-rouge">git clone https://github.com/sobekyll/sobekyll.github.io.git</code> or just download the zip file and unzip;</li>
+  <li>Copy files into your own blog directory;</li>
+  <li>Delete the posts under <code class="language-plaintext highlighter-rouge">_post</code> directory, and write your own post;</li>
+  <li>Push your blog to your own Github Pages repo;</li>
+</ol>
+
+<h3 id="for-others">For others</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>sobekyll
+</code></pre></div></div>
+<p>or add</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'sobekyll'</span>
+</code></pre></div></div>
+<p>then</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install</span>
+</code></pre></div></div>
+
+<p>change theme to <code class="language-plaintext highlighter-rouge">sobekyll</code> at <code class="language-plaintext highlighter-rouge">_config.yml</code> file.</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">theme</span><span class="pi">:</span> <span class="s">sobekyll</span>
+</code></pre></div></div>
+
+<h3 id="customize">Customize</h3>]]></content><author><name>boybeak</name></author><category term="Guide" /><category term="Jekyll" /><category term="SoberJS" /><category term="Material Design" /><summary type="html"><![CDATA[SobeKyll is a material design theme for Jekyll. It’s powered by SoberJS.]]></summary></entry></feed>
