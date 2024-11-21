@@ -15,6 +15,7 @@ layout: default
   </s-icon-button>
   {% endif %}
 
+  {% if paginator.total_pages > 3 %}
   <div class="pagination-indexing">
     {% for page in (1..paginator.total_pages) %}
     {% assign page_link = paginator.base_path | append: '/' %}
@@ -30,6 +31,7 @@ layout: default
     {% endif %}
     {% endfor %}
   </div>
+  {% endif %}
 
   {% if paginator.next_page %}
   <s-icon-button>
