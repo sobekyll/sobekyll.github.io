@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>{{ page.title | default: site.title }}</title>
+  {% if site.logo %}
+  <link rel="icon" href="{{ site.logo | absolute_url }}" type="image/*">
+  {% endif %}
   <link rel="stylesheet" href="{% if site.theme_assets %}{{ site.theme_assets | absolute_url }}/css/style.css{% else %}{{ '/assets/css/style.css' | absolute_url }}{% endif %}">
   <link rel="stylesheet" href="{% if site.theme_assets %}{{ site.theme_assets | absolute_url }}/css/rouge-github-auto.css{% else %}{{ '/assets/css/rouge-github-auto.css' | relative_url }}{% endif %}">
   <link rel="stylesheet" href="{% if site.theme_assets %}{{ site.theme_assets | absolute_url }}/css/github-markdown.css{% else %}{{ '/assets/css/github-markdown.css' | relative_url }}{% endif %}">
