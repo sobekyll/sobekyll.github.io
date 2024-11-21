@@ -60,7 +60,7 @@ main s-scroll-view {
     flex-grow: 1;
 }
 
-.content-wrapper {
+.contentWrapper {
     height: 100%; 
     display: flex; 
     flex-direction: column;
