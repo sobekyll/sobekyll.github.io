@@ -12,7 +12,7 @@
             <s-icon type="arrow_drop_down" slot="end"></s-icon>
         </s-button>
         {% for tag in site.tags %}
-        <s-popup-menu-item onclick="selfOpen('/tags/{{ tag[0] | slugify }}')">{{ tag[0] }}</s-popup-menu-item>
+        <s-popup-menu-item onclick="selfOpen('/tag/{{ tag[0] | slugify }}')">{{ tag[0] }}</s-popup-menu-item>
         {% endfor %}
     </s-popup-menu>
     {% endif %}
@@ -25,7 +25,7 @@
         </s-button>
         
         {% for category in site.categories %}
-        <s-popup-menu-item onclick="selfOpen('/categories/{{ category[0] | slugify }}')">{{ category[0] }}</s-popup-menu-item>
+        <s-popup-menu-item onclick="selfOpen('/category/{{ category[0] | slugify }}')">{{ category[0] }}</s-popup-menu-item>
         {% endfor %}
     </s-popup-menu>
     {% endif %}

@@ -27,7 +27,6 @@ markdown: kramdown
 theme: null
 include:
   - _themes
-  - tags
 
 theme_dir: _themes
 theme_assets: _themes/sobekyll/assets
@@ -35,9 +34,25 @@ layouts_dir: _themes/sobekyll/_layouts
 includes_dir: _themes/sobekyll/_includes
 sass_dir: _themes/sobekyll/_sass
 
+# tag_page_layout: tag
+# tag_page_dir: tags
+
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-archives
+
+jekyll-archives:
+  enabled: 
+    - tags
+    - categories
+  layout: archive
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
 
 markdown: kramdown
 kramdown:

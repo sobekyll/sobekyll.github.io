@@ -23,7 +23,7 @@ layout: default
       </svg>
     </s-icon>
     {% for tag in page.tags %}
-    <a href="/tags/{{ tag | slugify }}">{{ tag }}</a>
+    <a href="/tag/{{ tag | slugify }}">{{ tag }}</a>
     {% endfor %}
     <space style="margin-right: 8px;"></space>
     {% endif %}
@@ -37,7 +37,7 @@ layout: default
       </svg>
     </s-icon>
     {% for category in page.categories %}
-    <a href="/categories/{{ category | slugify }}">{{ category }}</a>
+    <a href="/category/{{ category | slugify }}">{{ category }}</a>
     {% endfor %}
     {% endif %}
   </p>

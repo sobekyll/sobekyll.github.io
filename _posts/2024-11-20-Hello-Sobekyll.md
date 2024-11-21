@@ -3,6 +3,7 @@ layout: post
 title:  "Hello Sobekyll"
 date:   2024-11-20 10:17:05 +0800
 tags: [Jekyll, SoberJS, Material Design]
+categories: [Guide]
 ---
 
 **SobeKyll** is a material design theme for [Jekyll](https://jekyllrb.com/). It's powered by [SoberJS](https://soberjs.com/).

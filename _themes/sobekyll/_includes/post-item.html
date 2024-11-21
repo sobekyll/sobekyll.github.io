@@ -16,7 +16,7 @@
             </svg>
         </s-icon>
         {% for tag in post.tags %}
-        <a href="/tags/{{ tag | slugify }}">{{ tag }}</a>
+        <a href="/tag/{{ tag | slugify }}">{{ tag }}</a>
         {% endfor %}
         {% endif %}
 
@@ -27,7 +27,7 @@
               </svg>
         </s-icon>
         {% for category in post.categories %}
-        <a href="/categories/{{ category | slugify }}">{{ category }}</a>
+        <a href="/category/{{ category | slugify }}">{{ category }}</a>
         {% endfor %}
         {% endif %}
     </p>
