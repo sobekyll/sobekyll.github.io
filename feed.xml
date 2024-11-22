@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2024-11-22T10:26:16+00:00</updated><id>/feed.xml</id><title type="html">Sobekyll</title><subtitle>A material design theme for Jekyll, based on SoberJS.</subtitle><author><name>boybeak</name></author><entry><title type="html">Better Usage</title><link href="/guide/2024/11/22/Better-usage.html" rel="alternate" type="text/html" title="Better Usage" /><published>2024-11-22T02:17:05+00:00</published><updated>2024-11-22T02:17:05+00:00</updated><id>/guide/2024/11/22/Better-usage</id><content type="html" xml:base="/guide/2024/11/22/Better-usage.html"><![CDATA[<p>Sobekyll works better when combined with some plugins. Below is an introduction to several plugins, and more will be added as new useful plugins are discovered.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2024-11-22T11:51:13+00:00</updated><id>/feed.xml</id><title type="html">Sobekyll</title><subtitle>A material design theme for Jekyll, based on SoberJS.</subtitle><author><name>boybeak</name></author><entry><title type="html">Better usage with …</title><link href="/guide/2024/11/22/Better-usage.html" rel="alternate" type="text/html" title="Better usage with …" /><published>2024-11-22T02:17:05+00:00</published><updated>2024-11-22T02:17:05+00:00</updated><id>/guide/2024/11/22/Better-usage</id><content type="html" xml:base="/guide/2024/11/22/Better-usage.html"><![CDATA[<p>Sobekyll works better when combined with some plugins. Below is an introduction to several plugins, and more will be added as new useful plugins are discovered.</p>
 
 <h2 id="jekyll-paginate">jekyll-paginate</h2>
 <p>This plugin is used for pagination to prevent loading delays caused by displaying all posts on the homepage at once. Sobekyll supports this plugin. Integration steps are as follows:
@@ -90,53 +90,223 @@ graph TD;
     C–&gt;D;
 &lt;/div&gt;</p>
 
-<p>For more configuration options, see: <a href="https://github.com/jasonbellamy/jekyll-mermaid">jekyll-mermaid</a></p>]]></content><author><name>boybeak</name></author><category term="Guide" /><category term="Mermaid" /><summary type="html"><![CDATA[Sobekyll works better when combined with some plugins. Below is an introduction to several plugins, and more will be added as new useful plugins are discovered.]]></summary></entry><entry><title type="html">Hello Sobekyll</title><link href="/guide/2024/11/20/Hello-Sobekyll.html" rel="alternate" type="text/html" title="Hello Sobekyll" /><published>2024-11-20T02:17:05+00:00</published><updated>2024-11-20T02:17:05+00:00</updated><id>/guide/2024/11/20/Hello-Sobekyll</id><content type="html" xml:base="/guide/2024/11/20/Hello-Sobekyll.html"><![CDATA[<p><strong>SobeKyll</strong> is a material design theme for <a href="https://jekyllrb.com/">Jekyll</a>. It’s powered by <a href="https://soberjs.com/">SoberJS</a>.</p>
+<p>For more configuration options, see: <a href="https://github.com/jasonbellamy/jekyll-mermaid">jekyll-mermaid</a></p>]]></content><author><name>boybeak</name></author><category term="Guide" /><category term="Mermaid" /><summary type="html"><![CDATA[Sobekyll works better when combined with some plugins. Below is an introduction to several plugins, and more will be added as new useful plugins are discovered.]]></summary></entry><entry><title type="html">配合使用</title><link href="/guide/2024/11/22/%E9%85%8D%E5%90%88%E4%BD%BF%E7%94%A8%E5%B0%A4%E4%BD%B3.html" rel="alternate" type="text/html" title="配合使用" /><published>2024-11-22T02:17:05+00:00</published><updated>2024-11-22T02:17:05+00:00</updated><id>/guide/2024/11/22/%E9%85%8D%E5%90%88%E4%BD%BF%E7%94%A8%E5%B0%A4%E4%BD%B3</id><content type="html" xml:base="/guide/2024/11/22/%E9%85%8D%E5%90%88%E4%BD%BF%E7%94%A8%E5%B0%A4%E4%BD%B3.html"><![CDATA[<p>Sobekyll搭配一些插件会有更好的使用体验，下面介绍若干插件，后续遇到更好的插件，会不断补充。</p>
+
+<h2 id="jekyll-paginate">jekyll-paginate</h2>
+<p>这是一个用于分页的插件，避免首页一次性展示所有的文章造成加载时间过长。Sobekyll对此插件已经做了支持。接入方式如下：
+在<strong>Gemfile</strong>中添加如下代码并执行bundle install。</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s2">"jekyll-paginate"</span><span class="p">,</span> <span class="s2">"~&gt; 1.1.0"</span>
+</code></pre></div></div>
+<p>在<strong>_config.yml</strong>文件中，启用并配置该插件。</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-paginate</span>
+
+<span class="na">paginate</span><span class="pi">:</span> <span class="m">5</span>   <span class="c1"># 每页显示的文章数量</span>
+<span class="na">paginate_path</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/page:num/"</span>  <span class="c1"># 分页路径，:num 会被页码替换</span>
+</code></pre></div></div>
+<p>更多使用配置请参考: <a href="https://github.com/jekyll/jekyll-paginate">jekyll-paginate</a></p>
+
+<h2 id="jekyll-archives">jekyll-archives</h2>
+<p>这是用于自动生成tag/category页面的插件，Jekyll默认不会按照tag/category生成页面，也就是说，如果你想点击某个tag/category，查看对应的文章列表，会自动跳转到404页面。为了解决这个问题，接入此插件：
+在<strong>Gemfile</strong>中添加如下代码并执行bundle install。</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'jekyll-archives'</span>
+</code></pre></div></div>
+<p>在<strong>_config.yml</strong>文件中，启用并配置该插件。</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-archives</span>
+<span class="na">jekyll-archives</span><span class="pi">:</span>
+  <span class="na">enabled</span><span class="pi">:</span> 
+    <span class="pi">-</span> <span class="s">tags</span>
+    <span class="pi">-</span> <span class="s">categories</span>
+  <span class="na">layout</span><span class="pi">:</span> <span class="s">archive</span>
+  <span class="na">permalinks</span><span class="pi">:</span>
+    <span class="na">year</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/:year/'</span>
+    <span class="na">month</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/:year/:month/'</span>
+    <span class="na">day</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/:year/:month/:day/'</span>
+    <span class="na">tag</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/tag/:name/'</span>
+    <span class="na">category</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/category/:name/'</span>
+</code></pre></div></div>
+<p>更多使用配置请参考: <a href="https://github.com/jekyll/jekyll-archives">jekyll-archives</a></p>
+
+<h2 id="jekyll-sitemap">jekyll-sitemap</h2>
+<p>该插件用于自动生成sitemap.xml，提交给相关搜索引擎的控制平台后，该搜索引擎就会知道你的目录结构，方便被搜索引擎索引到。接入方式如下：
+在<strong>Gemfile</strong>中添加如下代码并执行bundle install。</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'jekyll-sitemap'</span>
+</code></pre></div></div>
+<p>在<strong>_config.yml</strong>文件中，启用该插件。</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-sitemap</span>
+</code></pre></div></div>
+<p>更多使用配置请参考: <a href="https://github.com/jekyll/jekyll-sitemap">jekyll-sitemap</a></p>
+
+<h2 id="jekyll-seo-tag">jekyll-seo-tag</h2>
+<p>该插件用于自动生成一些页面头信息，方便搜索引擎检索。插件安装方式如下：
+在<strong>Gemfile</strong>中添加如下代码并执行bundle install。</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'jekyll-seo-tag'</span>
+</code></pre></div></div>
+<p>在<strong>_config.yml</strong>文件中，启用并配置该插件。</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-seo-tag</span>
+</code></pre></div></div>
+<p>更多使用配置请参考: <a href="https://github.com/jekyll/jekyll-seo-tag">jekyll-seo-tag</a></p>
+
+<h2 id="jekyll-mermaid">jekyll-mermaid</h2>
+<p>该插件用于解析以<strong>mermaid</strong>方式添加到图表。插件安装方式如下：
+在<strong>Gemfile</strong>中添加如下代码并执行bundle install。</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'jekyll-mermaid'</span>
+</code></pre></div></div>
+<p>在<strong>_config.yml</strong>文件中，启用并配置该插件。</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-mermaid</span>
+
+<span class="na">mermaid</span><span class="pi">:</span>
+  <span class="na">src</span><span class="pi">:</span> <span class="s1">'</span><span class="s">https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js'</span>
+</code></pre></div></div>
+
+<p>使用方式如下：</p>
+<pre><code class="language-mermaid">&lt;script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"&gt;&lt;/script&gt;&lt;div class="mermaid"&gt;
+graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+&lt;/div&gt;
+</code></pre>
+
+<p>效果如下：
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>&lt;div class="mermaid"&gt;
+graph TD;
+    A–&gt;B;
+    A–&gt;C;
+    B–&gt;D;
+    C–&gt;D;
+&lt;/div&gt;</p>
+
+<p>更多使用配置请参考: <a href="https://github.com/jasonbellamy/jekyll-mermaid">jekyll-mermaid</a></p>]]></content><author><name>boybeak</name></author><category term="Guide" /><category term="Mermaid" /><summary type="html"><![CDATA[Sobekyll搭配一些插件会有更好的使用体验，下面介绍若干插件，后续遇到更好的插件，会不断补充。]]></summary></entry><entry><title type="html">Hello Sobekyll</title><link href="/guide/2024/11/20/Hello-Sobekyll.html" rel="alternate" type="text/html" title="Hello Sobekyll" /><published>2024-11-20T02:17:05+00:00</published><updated>2024-11-20T02:17:05+00:00</updated><id>/guide/2024/11/20/Hello-Sobekyll</id><content type="html" xml:base="/guide/2024/11/20/Hello-Sobekyll.html"><![CDATA[<p><strong>SobeKyll</strong> is a Material Design-inspired <a href="https://jekyllrb.com/">Jekyll</a> theme developed based on <a href="https://soberjs.com/">SoberJS</a>.</p>
 
 <h2 id="installation">Installation</h2>
-<h3 id="for-github-pages">For Github Pages</h3>
-
-<p>Due to limited Jekyll dependencies and versions supported by Github Pages by default. reference: <a href="https://pages.github.com/versions/">Dependency versions</a></p>
-
-<p>If you’ve already have a Github Pages blog, and want to change theme to <code class="language-plaintext highlighter-rouge">Sobekyll</code>, follow these steps:</p>
-<ol>
-  <li>Clone this <a href="https://github.com/sobekyll/sobekyll.github.io">repo</a> with <code class="language-plaintext highlighter-rouge">git clone https://github.com/sobekyll/sobekyll.github.io.git</code> or just download the zip file and unzip;</li>
-  <li>Copy the <code class="language-plaintext highlighter-rouge">sobekyll</code> folder under <code class="language-plaintext highlighter-rouge">_themes</code> into your own blog’s <code class="language-plaintext highlighter-rouge">_themes</code> directory. If you don’t have a <code class="language-plaintext highlighter-rouge">_themes</code> directory, create it;</li>
-  <li>
-    <p>Add these configuration to your <code class="language-plaintext highlighter-rouge">_config.yml</code>:</p>
-
-    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="na">theme</span><span class="pi">:</span> <span class="no">null</span>
- <span class="na">include</span><span class="pi">:</span>
- <span class="pi">-</span> <span class="s">_themes</span>
-
- <span class="na">theme_dir</span><span class="pi">:</span> <span class="s">_themes</span>
- <span class="na">theme_assets</span><span class="pi">:</span> <span class="s">_themes/sobekyll/assets</span>
- <span class="na">layouts_dir</span><span class="pi">:</span> <span class="s">_themes/sobekyll/_layouts</span>
- <span class="na">includes_dir</span><span class="pi">:</span> <span class="s">_themes/sobekyll/_includes</span>
- <span class="na">sass_dir</span><span class="pi">:</span> <span class="s">_themes/sobekyll/_sass</span>
-</code></pre></div>    </div>
-  </li>
-</ol>
-
-<p>If you want to create a new blog and deploy it to <strong>Github Pages</strong>, follow these steps:</p>
-<ol>
-  <li>Clone this <a href="https://github.com/sobekyll/sobekyll.github.io">repo</a> with <code class="language-plaintext highlighter-rouge">git clone https://github.com/sobekyll/sobekyll.github.io.git</code> or just download the zip file and unzip;</li>
-  <li>Copy files into your own blog directory;</li>
-  <li>Delete the posts under <code class="language-plaintext highlighter-rouge">_post</code> directory, and write your own post;</li>
-  <li>Push your blog to your own Github Pages repo;</li>
-</ol>
+<h3 id="using-with-github-pages">Using with GitHub Pages</h3>
 
 <blockquote>
-  <p>The <code class="language-plaintext highlighter-rouge">jekyll-archives</code> plugin is not in default Github Pages supported dependencies. So in <code class="language-plaintext highlighter-rouge">tags</code> and <code class="language-plaintext highlighter-rouge">categories</code> is not available.</p>
+  <p>Since GitHub Pages supports only a limited set of Jekyll libraries and versions, additional configuration is required to use Sobekyll with GitHub Pages. For more details, refer to: <a href="https://pages.github.com/versions/">Dependency versions</a></p>
 </blockquote>
 
-<h3 id="use-action">Use action</h3>
-<p>In your root directory, create <code class="language-plaintext highlighter-rouge">.github/workflows/jekyll.yml</code>, and add this code:</p>
+<p>In the root directory of your blog, create a <code class="language-plaintext highlighter-rouge">.github/workflows/jekyll.yml</code> action configuration file and add the following code:</p>
+
 <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">Build and Deploy Jekyll</span>
 
 <span class="na">on</span><span class="pi">:</span>
   <span class="na">push</span><span class="pi">:</span>
     <span class="na">branches</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="s">main</span>  <span class="c1"># 或者你的默认分支\</span>
+      <span class="pi">-</span> <span class="s">main</span>  <span class="c1"># Or your default branch</span>
+
+<span class="na">permissions</span><span class="pi">:</span>
+  <span class="na">contents</span><span class="pi">:</span> <span class="s">write</span>  <span class="c1"># Allows write access to the repository</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">build</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+
+    <span class="na">steps</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Checkout Code</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v3</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Setup Ruby</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">ruby/setup-ruby@v1</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">ruby-version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3.1'</span> <span class="c1"># Ensure compatibility with Jekyll</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Install Dependencies</span>
+      <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+        <span class="s">gem install bundler</span>
+        <span class="s">bundle install</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Build Site</span>
+      <span class="na">run</span><span class="pi">:</span> <span class="s">bundle exec jekyll build</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Deploy to GitHub Pages</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">peaceiris/actions-gh-pages@v4</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">github_token</span><span class="pi">:</span> <span class="s">$</span>
+        <span class="na">publish_dir</span><span class="pi">:</span> <span class="s">./_site</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>Note the branch name <code class="language-plaintext highlighter-rouge">main</code>. For older repositories, change it to <code class="language-plaintext highlighter-rouge">master</code> if necessary, depending on your primary branch.</p>
+</blockquote>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">on</span><span class="pi">:</span>
+  <span class="na">push</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">master</span>  <span class="c1"># Use master for older projects</span>
+</code></pre></div></div>
+
+<p>In your <code class="language-plaintext highlighter-rouge">Gemfile</code>, add <code class="language-plaintext highlighter-rouge">gem 'sobekyll'</code> and run <code class="language-plaintext highlighter-rouge">bundle install</code>. Then configure the theme in the <code class="language-plaintext highlighter-rouge">_config.yml</code> file:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">theme</span><span class="pi">:</span> <span class="s">sobekyll</span>
+</code></pre></div></div>
+
+<p>After setting it up, push the changes to GitHub and go to <strong>Settings -&gt; Pages</strong> in your repository. Set <strong>Build and deployment</strong> to <strong>Deploy from a branch</strong> and select the <code class="language-plaintext highlighter-rouge">gh-pages</code> branch. Allow some time for the changes to take effect.</p>
+
+<h2 id="theme-customization">Theme Customization</h2>
+
+<h3 id="sidebar">Sidebar</h3>
+<p>Set author information:</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">author</span><span class="pi">:</span> 
+  <span class="na">name</span><span class="pi">:</span> <span class="s">boybeak</span>
+  <span class="na">avatar</span><span class="pi">:</span> <span class="s1">'</span><span class="s">https://avatars.githubusercontent.com/u/6696502?v=4'</span>
+</code></pre></div></div>
+
+<p>Configure the sidebar menu:</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">menus</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Contact Me</span>
+    <span class="na">items</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Github</span>
+        <span class="na">icon</span><span class="pi">:</span> <span class="s1">'</span><span class="s">&lt;svg</span><span class="nv"> </span><span class="s">xmlns="http://www.w3.org/2000/svg"</span><span class="nv"> </span><span class="s">viewBox="0</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">496</span><span class="nv"> </span><span class="s">512"&gt;&lt;!--!</span><span class="nv"> </span><span class="s">Font</span><span class="nv"> </span><span class="s">Awesome</span><span class="nv"> </span><span class="s">Free</span><span class="nv"> </span><span class="s">6.6.0</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">@fontawesome</span><span class="nv"> </span><span class="s">--&gt;&lt;path</span><span class="nv"> </span><span class="s">d="..."/&gt;&lt;/svg&gt;'</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s">https://github.com/boybeak</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">X</span>
+        <span class="na">icon</span><span class="pi">:</span> <span class="s1">'</span><span class="s">&lt;svg</span><span class="nv"> </span><span class="s">xmlns="http://www.w3.org/2000/svg"</span><span class="nv"> </span><span class="s">viewBox="0</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">512</span><span class="nv"> </span><span class="s">512"&gt;&lt;!--!</span><span class="nv"> </span><span class="s">Font</span><span class="nv"> </span><span class="s">Awesome</span><span class="nv"> </span><span class="s">Free</span><span class="nv"> </span><span class="s">6.6.0</span><span class="nv"> </span><span class="s">--&gt;&lt;path</span><span class="nv"> </span><span class="s">d="..."/&gt;&lt;/svg&gt;'</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s">https://x.com/BeakInAir</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Email</span>
+        <span class="na">icon</span><span class="pi">:</span> <span class="s1">'</span><span class="s">&lt;svg</span><span class="nv"> </span><span class="s">xmlns="http://www.w3.org/2000/svg"</span><span class="nv"> </span><span class="s">viewBox="0</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">512</span><span class="nv"> </span><span class="s">512"&gt;&lt;!--!</span><span class="nv"> </span><span class="s">Font</span><span class="nv"> </span><span class="s">Awesome</span><span class="nv"> </span><span class="s">Free</span><span class="nv"> </span><span class="s">6.6.0</span><span class="nv"> </span><span class="s">--&gt;&lt;path</span><span class="nv"> </span><span class="s">d="..."/&gt;&lt;/svg&gt;'</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s">mailto:boybeak@gmail.com</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">My Apps</span>
+    <span class="na">items</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">AOD Volume</span>
+        <span class="na">img</span><span class="pi">:</span> <span class="s">/assets/images/AODVolume.png</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">JustTodo</span>
+        <span class="na">img</span><span class="pi">:</span> <span class="s">/assets/images/JustTodo.png</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s">https://github.com/boybeak/JustTodo</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">DeskNote</span>
+        <span class="na">img</span><span class="pi">:</span> <span class="s">/assets/images/DeskNote.png</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s">https://github.com/boybeak/DeskNote</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Translator</span>
+        <span class="na">img</span><span class="pi">:</span> <span class="s">/assets/images/Translator.png</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s">https://github.com/boybeak/TranslatorDocs</span>
+  <span class="pi">-</span> <span class="na">items</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Donate Me</span>
+        <span class="na">icon</span><span class="pi">:</span> <span class="s1">'</span><span class="s">&lt;svg</span><span class="nv"> </span><span class="s">stroke-width="0"</span><span class="nv"> </span><span class="s">viewBox="0</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">24</span><span class="nv"> </span><span class="s">24"</span><span class="nv"> </span><span class="s">class="inline-block</span><span class="nv"> </span><span class="s">text-primary"</span><span class="nv"> </span><span class="s">height="1em"</span><span class="nv"> </span><span class="s">width="1em"</span><span class="nv"> </span><span class="s">xmlns="http://www.w3.org/2000/svg"&gt;&lt;path</span><span class="nv"> </span><span class="s">d="..."/&gt;&lt;/svg&gt;'</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s">https://1kafei.com/user/payment/new/boybeak/069DN2BH0I7/?referrer=/boybeak/</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">About</span>
+        <span class="na">icon</span><span class="pi">:</span> <span class="s1">'</span><span class="s">&lt;svg</span><span class="nv"> </span><span class="s">xmlns="http://www.w3.org/2000/svg"</span><span class="nv"> </span><span class="s">viewBox="0</span><span class="nv"> </span><span class="s">-960</span><span class="nv"> </span><span class="s">960</span><span class="nv"> </span><span class="s">960"&gt;&lt;path</span><span class="nv"> </span><span class="s">d="..."/&gt;&lt;/svg&gt;'</span>
+</code></pre></div></div>
+
+<p>Use <code class="language-plaintext highlighter-rouge">icon</code> to set SVG code and <code class="language-plaintext highlighter-rouge">img</code> to set the image path or URL.</p>]]></content><author><name>boybeak</name></author><category term="Guide" /><category term="Jekyll" /><category term="SoberJS" /><category term="Material Design" /><summary type="html"><![CDATA[SobeKyll is a Material Design-inspired Jekyll theme developed based on SoberJS.]]></summary></entry><entry><title type="html">你好Sobekyll</title><link href="/guide/2024/11/20/%E4%BD%A0%E5%A5%BD-Sobekyll.html" rel="alternate" type="text/html" title="你好Sobekyll" /><published>2024-11-20T02:17:05+00:00</published><updated>2024-11-20T02:17:05+00:00</updated><id>/guide/2024/11/20/%E4%BD%A0%E5%A5%BD-Sobekyll</id><content type="html" xml:base="/guide/2024/11/20/%E4%BD%A0%E5%A5%BD-Sobekyll.html"><![CDATA[<p><strong>SobeKyll</strong> 是一个基于<a href="https://soberjs.com/">SoberJS</a>开发的<a href="https://jekyllrb.com/">Jekyll</a> Material Design风格的主题.</p>
+
+<h2 id="安装">安装</h2>
+<h3 id="在github-pages中使用">在Github Pages中使用</h3>
+
+<blockquote>
+  <p>因为Github Pages对Jekyll以及相关库和版本的支持都有限，默认只支持部分库以及有限的版本，所以在Github Pages中使用Sobekyll需要特别说明。相关信息请参考: <a href="https://pages.github.com/versions/">Dependency versions</a></p>
+</blockquote>
+
+<p>在你博客目录的根目录下，创建<code class="language-plaintext highlighter-rouge">.github/workflows/jekyll.yml</code>action配置文件，并添加如下代码：</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">Build and Deploy Jekyll</span>
+
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">push</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">main</span>  <span class="c1"># 或者你的默认分支</span>
 
 <span class="na">permissions</span><span class="pi">:</span>
   <span class="na">contents</span><span class="pi">:</span> <span class="s">write</span>  <span class="c1"># 允许对仓库内容进行写操作</span>
@@ -168,34 +338,29 @@ graph TD;
         <span class="na">github_token</span><span class="pi">:</span> <span class="s">$</span>
         <span class="na">publish_dir</span><span class="pi">:</span> <span class="s">./_site</span>
 </code></pre></div></div>
-<p>Then, in your repo’s <strong>Settings -&gt; Pages</strong>, change <strong>Build and deployment</strong> to <strong>Deploy from a branch</strong>, and choose branch to ‘gh-pages’.</p>
+<blockquote>
+  <p>这里需要注意的是分支名称<code class="language-plaintext highlighter-rouge">main</code>，在部分早期创建的repo中，需要改为<code class="language-plaintext highlighter-rouge">master</code>，这取决于你项目的主分支是什么。</p>
+  <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">on</span><span class="pi">:</span>
+  <span class="na">push</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">master</span>  <span class="c1"># 早期项目需要改为master</span>
+</code></pre></div>  </div>
+</blockquote>
 
-<p>If you choose use github action to build and deploy blog. You can Use <code class="language-plaintext highlighter-rouge">Sobekyll</code> directly as a dependencies as below decribed.</p>
-
-<h3 id="for-others">For others</h3>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>sobekyll
-</code></pre></div></div>
-<p>or add</p>
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'sobekyll'</span>
-</code></pre></div></div>
-<p>then</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install</span>
-</code></pre></div></div>
-
-<p>change theme to <code class="language-plaintext highlighter-rouge">sobekyll</code> at <code class="language-plaintext highlighter-rouge">_config.yml</code> file.</p>
+<p>在<code class="language-plaintext highlighter-rouge">Gemfile</code>中，添加<code class="language-plaintext highlighter-rouge">gem 'sobekyll'</code>并执行<code class="language-plaintext highlighter-rouge">bundle install</code>，然后在<code class="language-plaintext highlighter-rouge">_config.yml</code>文件中配置主题：</p>
 <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">theme</span><span class="pi">:</span> <span class="s">sobekyll</span>
 </code></pre></div></div>
+<p>设置完成，将修改推送到GitHub，并在repo的<strong>Settings -&gt; Pages</strong>, 将<strong>Build and deployment</strong> 项改为<strong>Deploy from a branch</strong>, 并把分支改为’gh-pages’。修改后需要等待一段时间生效。</p>
 
-<h2 id="customize">Customize</h2>
+<h2 id="主题自定义">主题自定义</h2>
 
-<h3 id="sidebar">Sidebar</h3>
-<p>Setup author info:</p>
+<h3 id="侧滑栏">侧滑栏</h3>
+<p>设置作者信息:</p>
 <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">author</span><span class="pi">:</span> 
   <span class="na">name</span><span class="pi">:</span> <span class="s">boybeak</span>
   <span class="na">avatar</span><span class="pi">:</span> <span class="s1">'</span><span class="s">https://avatars.githubusercontent.com/u/6696502?v=4'</span>
 </code></pre></div></div>
-<p>Setup menu:</p>
+<p>设置侧滑菜单:</p>
 <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">menus</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Contact Me</span>
     <span class="na">items</span><span class="pi">:</span>
@@ -228,4 +393,4 @@ graph TD;
       <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">About</span>
         <span class="na">icon</span><span class="pi">:</span> <span class="s1">'</span><span class="s">&lt;svg</span><span class="nv"> </span><span class="s">xmlns="http://www.w3.org/2000/svg"</span><span class="nv"> </span><span class="s">viewBox="0</span><span class="nv"> </span><span class="s">-960</span><span class="nv"> </span><span class="s">960</span><span class="nv"> </span><span class="s">960"&gt;&lt;path</span><span class="nv"> </span><span class="s">d="M440-280h80v-240h-80v240Zm40-320q17</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17</span><span class="nv"> </span><span class="s">0-28.5</span><span class="nv"> </span><span class="s">11.5T440-640q0</span><span class="nv"> </span><span class="s">17</span><span class="nv"> </span><span class="s">11.5</span><span class="nv"> </span><span class="s">28.5T480-600Zm0</span><span class="nv"> </span><span class="s">520q-83</span><span class="nv"> </span><span class="s">0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83</span><span class="nv"> </span><span class="s">31.5-156T197-763q54-54</span><span class="nv"> </span><span class="s">127-85.5T480-880q83</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">156</span><span class="nv"> </span><span class="s">31.5T763-763q54</span><span class="nv"> </span><span class="s">54</span><span class="nv"> </span><span class="s">85.5</span><span class="nv"> </span><span class="s">127T880-480q0</span><span class="nv"> </span><span class="s">83-31.5</span><span class="nv"> </span><span class="s">156T763-197q-54</span><span class="nv"> </span><span class="s">54-127</span><span class="nv"> </span><span class="s">85.5T480-80Zm0-80q134</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">227-93t93-227q0-134-93-227t-227-93q-134</span><span class="nv"> </span><span class="s">0-227</span><span class="nv"> </span><span class="s">93t-93</span><span class="nv"> </span><span class="s">227q0</span><span class="nv"> </span><span class="s">134</span><span class="nv"> </span><span class="s">93</span><span class="nv"> </span><span class="s">227t227</span><span class="nv"> </span><span class="s">93Zm0-320Z"&gt;&lt;/path&gt;&lt;/svg&gt;'</span>
 </code></pre></div></div>
-<p><code class="language-plaintext highlighter-rouge">icon</code> for svg code, and <code class="language-plaintext highlighter-rouge">img</code> for a image’s directory or url.</p>]]></content><author><name>boybeak</name></author><category term="Guide" /><category term="Jekyll" /><category term="SoberJS" /><category term="Material Design" /><summary type="html"><![CDATA[SobeKyll is a material design theme for Jekyll. It’s powered by SoberJS.]]></summary></entry></feed>
+<p><code class="language-plaintext highlighter-rouge">icon</code>设置svg代码, <code class="language-plaintext highlighter-rouge">img</code>设置图片路径或者URL.</p>]]></content><author><name>boybeak</name></author><category term="Guide" /><category term="Jekyll" /><category term="SoberJS" /><category term="Material Design" /><summary type="html"><![CDATA[SobeKyll 是一个基于SoberJS开发的Jekyll Material Design风格的主题.]]></summary></entry></feed>
