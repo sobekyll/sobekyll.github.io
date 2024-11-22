@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Better Usage"
+title:  "Better usage with ..."
 date:   2024-11-22 10:17:05 +0800
 tags: [Mermaid]
 categories: [Guide]
