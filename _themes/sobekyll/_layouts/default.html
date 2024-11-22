@@ -17,6 +17,8 @@
       <meta name="msvalidate.01" content="{{ site.bingSiteVerification }}" />
   {% endif %}
 
+  {% seo %}
+
   <link rel="stylesheet" href="{% if site.theme_assets %}{{ site.theme_assets | absolute_url }}/css/style.css{% else %}{{ '/assets/css/style.css' | absolute_url }}{% endif %}">
   <link rel="stylesheet" href="{% if site.theme_assets %}{{ site.theme_assets | absolute_url }}/css/rouge-github-auto.css{% else %}{{ '/assets/css/rouge-github-auto.css' | relative_url }}{% endif %}">
   <link rel="stylesheet" href="{% if site.theme_assets %}{{ site.theme_assets | absolute_url }}/css/github-markdown.css{% else %}{{ '/assets/css/github-markdown.css' | relative_url }}{% endif %}">

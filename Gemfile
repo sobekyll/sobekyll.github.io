@@ -44,5 +44,5 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 # gem "sobekyll", "~> 0.1.3"
 gem 'rouge'
 gem "jekyll-paginate", "~> 1.1.0"
-# gem 'jekyll-tagging'
 gem 'jekyll-archives'
+gem 'jekyll-seo-tag'

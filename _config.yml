@@ -42,6 +42,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-archives
+  - jekyll-seo-tag
 
 jekyll-archives:
   enabled: 
