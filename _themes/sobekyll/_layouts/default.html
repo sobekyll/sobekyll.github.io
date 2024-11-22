@@ -11,10 +11,10 @@
   {% endif %}
 
   {% if site.googleSiteVerification %}
-    <meta name="google-site-verification" content="<%= site.googleSiteVerification %>" />
+    <meta name="google-site-verification" content="{{ site.googleSiteVerification }}" />
   {% endif %}
   {% if (site.bingSiteVerification) %}
-      <meta name="msvalidate.01" content="<%= site.bingSiteVerification %>" />
+      <meta name="msvalidate.01" content="{{ site.bingSiteVerification }}" />
   {% endif %}
 
   <link rel="stylesheet" href="{% if site.theme_assets %}{{ site.theme_assets | absolute_url }}/css/style.css{% else %}{{ '/assets/css/style.css' | absolute_url }}{% endif %}">
@@ -26,13 +26,13 @@
   <script src="{% if site.theme_assets %}{{ site.theme_assets | absolute_url }}/js/sobekyll.js{% else %}{{ '/assets/js/sobekyll.js' | relative_url }}{% endif %}"></script>
 
   {% if site.googleAnalytics %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= site.googleAnalytics %>"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.googleAnalytics }}"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
   
-      gtag('config', '<%= site.googleAnalytics %>');
+      gtag('config', "{{ site.googleAnalytics }}");
     </script>
   {% endif %}
 </head>
