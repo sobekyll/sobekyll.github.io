@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "sobekyll" # 你的主题名称
-  s.version     = "0.2.7"    # 版本号
+  s.version     = "0.2.8"    # 版本号
   s.summary     = "A material design style Jekyll theme based on Sober." # 简短描述
   s.description = "A material design style Jekyll theme based on Sober." # 详细描述
   s.authors     = ["boybeak"]
