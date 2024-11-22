@@ -1,4 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2024-11-22T06:32:00+00:00</updated><id>/feed.xml</id><title type="html">Sobekyll</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>boybeak</name></author><entry><title type="html">Hello Sobekyll</title><link href="/guide/2024/11/20/Hello-Sobekyll.html" rel="alternate" type="text/html" title="Hello Sobekyll" /><published>2024-11-20T02:17:05+00:00</published><updated>2024-11-20T02:17:05+00:00</updated><id>/guide/2024/11/20/Hello-Sobekyll</id><content type="html" xml:base="/guide/2024/11/20/Hello-Sobekyll.html"><![CDATA[<p><strong>SobeKyll</strong> is a material design theme for <a href="https://jekyllrb.com/">Jekyll</a>. It’s powered by <a href="https://soberjs.com/">SoberJS</a>.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2024-11-22T07:03:10+00:00</updated><id>/feed.xml</id><title type="html">Sobekyll</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>boybeak</name></author><entry><title type="html">Mermaid support</title><link href="/guide/2024/11/22/Mermaid-support.html" rel="alternate" type="text/html" title="Mermaid support" /><published>2024-11-22T02:17:05+00:00</published><updated>2024-11-22T02:17:05+00:00</updated><id>/guide/2024/11/22/Mermaid-support</id><content type="html" xml:base="/guide/2024/11/22/Mermaid-support.html"><![CDATA[<pre><code class="language-mermaid">&lt;script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"&gt;&lt;/script&gt;&lt;div class="mermaid"&gt;
+graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+&lt;/div&gt;
+</code></pre>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<div class="mermaid">
+graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+</div>]]></content><author><name>boybeak</name></author><category term="Guide" /><category term="Mermaid" /><summary type="html"><![CDATA[&lt;script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"&gt;&lt;/script&gt;&lt;div class="mermaid"&gt; graph TD; A--&gt;B; A--&gt;C; B--&gt;D; C--&gt;D; &lt;/div&gt;]]></summary></entry><entry><title type="html">Hello Sobekyll</title><link href="/guide/2024/11/20/Hello-Sobekyll.html" rel="alternate" type="text/html" title="Hello Sobekyll" /><published>2024-11-20T02:17:05+00:00</published><updated>2024-11-20T02:17:05+00:00</updated><id>/guide/2024/11/20/Hello-Sobekyll</id><content type="html" xml:base="/guide/2024/11/20/Hello-Sobekyll.html"><![CDATA[<p><strong>SobeKyll</strong> is a material design theme for <a href="https://jekyllrb.com/">Jekyll</a>. It’s powered by <a href="https://soberjs.com/">SoberJS</a>.</p>
 
 <h2 id="installation">Installation</h2>
 <h3 id="for-github-pages">For Github Pages</h3>
