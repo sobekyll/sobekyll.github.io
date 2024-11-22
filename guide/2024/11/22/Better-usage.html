@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Mermaid support</title>
+  <title>Better Usage</title>
   
   <link rel="icon" href="/assets/icons/favicon.ico" type="image/*">
   
@@ -14,22 +14,22 @@
   
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Mermaid support | Sobekyll</title>
+<title>Better Usage | Sobekyll</title>
 <meta name="generator" content="Jekyll v3.10.0" />
-<meta property="og:title" content="Mermaid support" />
+<meta property="og:title" content="Better Usage" />
 <meta name="author" content="boybeak" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="&lt;script src=&quot;https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js&quot;&gt;&lt;/script&gt;&lt;div class=&quot;mermaid&quot;&gt; graph TD; A--&gt;B; A--&gt;C; B--&gt;D; C--&gt;D; &lt;/div&gt;" />
-<meta property="og:description" content="&lt;script src=&quot;https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js&quot;&gt;&lt;/script&gt;&lt;div class=&quot;mermaid&quot;&gt; graph TD; A--&gt;B; A--&gt;C; B--&gt;D; C--&gt;D; &lt;/div&gt;" />
-<link rel="canonical" href="/guide/2024/11/22/Mermaid-support.html" />
-<meta property="og:url" content="/guide/2024/11/22/Mermaid-support.html" />
+<meta name="description" content="Sobekyll搭配一些插件会有更好的使用体验，下面介绍若干插件，后续遇到更好的插件，会不断补充。" />
+<meta property="og:description" content="Sobekyll搭配一些插件会有更好的使用体验，下面介绍若干插件，后续遇到更好的插件，会不断补充。" />
+<link rel="canonical" href="/guide/2024/11/22/Better-usage.html" />
+<meta property="og:url" content="/guide/2024/11/22/Better-usage.html" />
 <meta property="og:site_name" content="Sobekyll" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-11-22T02:17:05+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Mermaid support" />
+<meta property="twitter:title" content="Better Usage" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"boybeak"},"dateModified":"2024-11-22T02:17:05+00:00","datePublished":"2024-11-22T02:17:05+00:00","description":"&lt;script src=&quot;https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js&quot;&gt;&lt;/script&gt;&lt;div class=&quot;mermaid&quot;&gt; graph TD; A--&gt;B; A--&gt;C; B--&gt;D; C--&gt;D; &lt;/div&gt;","headline":"Mermaid support","mainEntityOfPage":{"@type":"WebPage","@id":"/guide/2024/11/22/Mermaid-support.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/assets/icons/favicon.ico"},"name":"boybeak"},"url":"/guide/2024/11/22/Mermaid-support.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"boybeak"},"dateModified":"2024-11-22T02:17:05+00:00","datePublished":"2024-11-22T02:17:05+00:00","description":"Sobekyll搭配一些插件会有更好的使用体验，下面介绍若干插件，后续遇到更好的插件，会不断补充。","headline":"Better Usage","mainEntityOfPage":{"@type":"WebPage","@id":"/guide/2024/11/22/Better-usage.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/assets/icons/favicon.ico"},"name":"boybeak"},"url":"/guide/2024/11/22/Better-usage.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -228,7 +228,7 @@
           <div class="contentWrapper">
             <div class="content">
               <div class="article">
-  <h1 style="margin-block-start: 0; margin-block-end: 0;">Mermaid support</h1>
+  <h1 style="margin-block-start: 0; margin-block-end: 0;">Better Usage</h1>
   <p class="post-meta">
     <s-icon style="width: 20px; height: 20px;">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
@@ -249,7 +249,81 @@
   
   <div class="post-content">
     <div class="markdown-body" style="background-color: transparent; min-height: 0px;">
-      <pre><code class="language-mermaid">&lt;script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"&gt;&lt;/script&gt;&lt;div class="mermaid"&gt;
+      <p>Sobekyll搭配一些插件会有更好的使用体验，下面介绍若干插件，后续遇到更好的插件，会不断补充。</p>
+
+<h2 id="jekyll-paginate">jekyll-paginate</h2>
+<p>这是一个用于分页的插件，避免首页一次性展示所有的文章造成加载时间过长。Sobekyll对此插件已经做了支持。接入方式如下：
+在<strong>Gemfile</strong>中添加如下代码并执行<code class="language-plaintext highlighter-rouge">bundle install</code>。</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s2">"jekyll-paginate"</span><span class="p">,</span> <span class="s2">"~&gt; 1.1.0"</span>
+</code></pre></div></div>
+<p>在<strong>_config.yml</strong>文件中，启用并配置该插件。</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-paginate</span>
+
+<span class="na">paginate</span><span class="pi">:</span> <span class="m">5</span>   <span class="c1"># 每页显示的文章数量</span>
+<span class="na">paginate_path</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/page:num/"</span>  <span class="c1"># 分页路径，:num 会被页码替换</span>
+</code></pre></div></div>
+<p>更多使用配置请参考: <a href="https://github.com/jekyll/jekyll-paginate">jekyll-paginate</a></p>
+
+<h2 id="jekyll-archives">jekyll-archives</h2>
+<p>这是用于自动生成tag/category页面的插件，Jekyll默认不会按照tag/category生成页面，也就是说，如果你想点击某个tag/category，查看对应的文章列表，会自动跳转到404页面。为了解决这个问题，接入此插件：
+在<strong>Gemfile</strong>中添加如下代码并执行<code class="language-plaintext highlighter-rouge">bundle install</code>。</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'jekyll-archives'</span>
+</code></pre></div></div>
+<p>在<strong>_config.yml</strong>文件中，启用并配置该插件。</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-archives</span>
+<span class="na">jekyll-archives</span><span class="pi">:</span>
+  <span class="na">enabled</span><span class="pi">:</span> 
+    <span class="pi">-</span> <span class="s">tags</span>
+    <span class="pi">-</span> <span class="s">categories</span>
+  <span class="na">layout</span><span class="pi">:</span> <span class="s">archive</span>
+  <span class="na">permalinks</span><span class="pi">:</span>
+    <span class="na">year</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/:year/'</span>
+    <span class="na">month</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/:year/:month/'</span>
+    <span class="na">day</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/:year/:month/:day/'</span>
+    <span class="na">tag</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/tag/:name/'</span>
+    <span class="na">category</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/category/:name/'</span>
+</code></pre></div></div>
+<p>更多使用配置请参考: <a href="https://github.com/jekyll/jekyll-archives">jekyll-archives</a></p>
+
+<h2 id="jekyll-sitemap">jekyll-sitemap</h2>
+<p>该插件用于自动生成<code class="language-plaintext highlighter-rouge">sitemap.xml</code>，提交给相关搜索引擎的控制平台后，该搜索引擎就会知道你的目录结构，方便被搜索引擎索引到。接入方式如下：
+在<strong>Gemfile</strong>中添加如下代码并执行<code class="language-plaintext highlighter-rouge">bundle install</code>。</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'jekyll-sitemap'</span>
+</code></pre></div></div>
+<p>在<strong>_config.yml</strong>文件中，启用该插件。</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-sitemap</span>
+</code></pre></div></div>
+<p>更多使用配置请参考: <a href="https://github.com/jekyll/jekyll-sitemap">jekyll-sitemap</a></p>
+
+<h2 id="jekyll-seo-tag">jekyll-seo-tag</h2>
+<p>该插件用于自动生成一些页面头信息，方便搜索引擎检索。插件安装方式如下：
+在<strong>Gemfile</strong>中添加如下代码并执行<code class="language-plaintext highlighter-rouge">bundle install</code>。</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'jekyll-seo-tag'</span>
+</code></pre></div></div>
+<p>在<strong>_config.yml</strong>文件中，启用并配置该插件。</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-seo-tag</span>
+</code></pre></div></div>
+<p>更多使用配置请参考: <a href="https://github.com/jekyll/jekyll-seo-tag">jekyll-seo-tag</a></p>
+
+<h2 id="jekyll-mermaid">jekyll-mermaid</h2>
+<p>该插件用于解析以<strong>mermaid</strong>方式添加到图表。插件安装方式如下：
+在<strong>Gemfile</strong>中添加如下代码并执行<code class="language-plaintext highlighter-rouge">bundle install</code>。</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'jekyll-mermaid'</span>
+</code></pre></div></div>
+<p>在<strong>_config.yml</strong>文件中，启用并配置该插件。</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-mermaid</span>
+
+<span class="na">mermaid</span><span class="pi">:</span>
+  <span class="na">src</span><span class="pi">:</span> <span class="s1">'</span><span class="s">https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js'</span>
+</code></pre></div></div>
+
+<p>使用方式如下：</p>
+<pre><code class="language-mermaid">&lt;script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"&gt;&lt;/script&gt;&lt;div class="mermaid"&gt;
 graph TD;
     A--&gt;B;
     A--&gt;C;
@@ -258,14 +332,16 @@ graph TD;
 &lt;/div&gt;
 </code></pre>
 
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-<div class="mermaid">
+<p>效果如下：
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>&lt;div class="mermaid"&gt;
 graph TD;
-    A--&gt;B;
-    A--&gt;C;
-    B--&gt;D;
-    C--&gt;D;
-</div>
+    A–&gt;B;
+    A–&gt;C;
+    B–&gt;D;
+    C–&gt;D;
+&lt;/div&gt;</p>
+
+<p>更多使用配置请参考: <a href="https://github.com/jasonbellamy/jekyll-mermaid">jekyll-mermaid</a></p>
 
     </div>
   </div>
