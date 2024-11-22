@@ -6,31 +6,31 @@ tags: [Mermaid]
 categories: [Guide]
 ---
 
-Sobekyll搭配一些插件会有更好的使用体验，下面介绍若干插件，后续遇到更好的插件，会不断补充。
+Sobekyll works better when combined with some plugins. Below is an introduction to several plugins, and more will be added as new useful plugins are discovered.
 
 ## jekyll-paginate
-这是一个用于分页的插件，避免首页一次性展示所有的文章造成加载时间过长。Sobekyll对此插件已经做了支持。接入方式如下：
-在**Gemfile**中添加如下代码并执行`bundle install`。
+This plugin is used for pagination to prevent loading delays caused by displaying all posts on the homepage at once. Sobekyll supports this plugin. Integration steps are as follows:
+Add the following code to the **Gemfile** and run `bundle install`.
 ```ruby
 gem "jekyll-paginate", "~> 1.1.0"
 ```
-在**_config.yml**文件中，启用并配置该插件。
+Enable and configure the plugin in the **_config.yml** file.
 ```yml
 plugins:
   - jekyll-paginate
 
-paginate: 5   # 每页显示的文章数量
-paginate_path: "/page:num/"  # 分页路径，:num 会被页码替换
+paginate: 5   # Number of posts per page
+paginate_path: "/page:num/"  # Pagination path, :num will be replaced by the page number
 ```
-更多使用配置请参考: [jekyll-paginate](https://github.com/jekyll/jekyll-paginate)
+For more configuration options, see: [jekyll-paginate](https://github.com/jekyll/jekyll-paginate)
 
 ## jekyll-archives
-这是用于自动生成tag/category页面的插件，Jekyll默认不会按照tag/category生成页面，也就是说，如果你想点击某个tag/category，查看对应的文章列表，会自动跳转到404页面。为了解决这个问题，接入此插件：
-在**Gemfile**中添加如下代码并执行`bundle install`。
+This plugin is used to automatically generate tag/category pages. By default, Jekyll does not create pages for tags/categories. For example, clicking a tag/category would lead to a 404 page. To solve this issue, integrate this plugin:
+Add the following code to the **Gemfile** and run `bundle install`.
 ```ruby
 gem 'jekyll-archives'
 ```
-在**_config.yml**文件中，启用并配置该插件。
+Enable and configure the plugin in the **_config.yml** file.
 ```yml
 plugins:
   - jekyll-archives
@@ -46,41 +46,41 @@ jekyll-archives:
     tag: '/tag/:name/'
     category: '/category/:name/'
 ```
-更多使用配置请参考: [jekyll-archives](https://github.com/jekyll/jekyll-archives)
+For more configuration options, see: [jekyll-archives](https://github.com/jekyll/jekyll-archives)
 
 ## jekyll-sitemap
-该插件用于自动生成`sitemap.xml`，提交给相关搜索引擎的控制平台后，该搜索引擎就会知道你的目录结构，方便被搜索引擎索引到。接入方式如下：
-在**Gemfile**中添加如下代码并执行`bundle install`。
+This plugin is used to automatically generate `sitemap.xml`. After submitting it to the control platform of a search engine, the search engine will understand your directory structure, making your site easier to index. Integration steps are as follows:
+Add the following code to the **Gemfile** and run `bundle install`.
 ```ruby
 gem 'jekyll-sitemap'
 ```
-在**_config.yml**文件中，启用该插件。
+Enable the plugin in the **_config.yml** file.
 ```yml
 plugins:
   - jekyll-sitemap
 ```
-更多使用配置请参考: [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)
+For more configuration options, see: [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)
 
 ## jekyll-seo-tag
-该插件用于自动生成一些页面头信息，方便搜索引擎检索。插件安装方式如下：
-在**Gemfile**中添加如下代码并执行`bundle install`。
+This plugin is used to automatically generate some page metadata, facilitating search engine indexing. Integration steps are as follows:
+Add the following code to the **Gemfile** and run `bundle install`.
 ```ruby
 gem 'jekyll-seo-tag'
 ```
-在**_config.yml**文件中，启用并配置该插件。
+Enable and configure the plugin in the **_config.yml** file.
 ```yml
 plugins:
   - jekyll-seo-tag
 ```
-更多使用配置请参考: [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag)
+For more configuration options, see: [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag)
 
 ## jekyll-mermaid
-该插件用于解析以**mermaid**方式添加到图表。插件安装方式如下：
-在**Gemfile**中添加如下代码并执行`bundle install`。
+This plugin is used to render diagrams using **mermaid** syntax. Integration steps are as follows:
+Add the following code to the **Gemfile** and run `bundle install`.
 ```ruby
 gem 'jekyll-mermaid'
 ```
-在**_config.yml**文件中，启用并配置该插件。
+Enable and configure the plugin in the **_config.yml** file.
 ```yml
 plugins:
   - jekyll-mermaid
@@ -89,7 +89,7 @@ mermaid:
   src: 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js'
 ```
 
-使用方式如下：
+Usage example:
 ```mermaid
 {% mermaid %}
 graph TD;
@@ -100,7 +100,7 @@ graph TD;
 {% endmermaid %}
 ```
 
-效果如下：
+Output example:
 {% mermaid %}
 graph TD;
     A-->B;
@@ -109,4 +109,4 @@ graph TD;
     C-->D;
 {% endmermaid %}
 
-更多使用配置请参考: [jekyll-mermaid](https://github.com/jasonbellamy/jekyll-mermaid)
+For more configuration options, see: [jekyll-mermaid](https://github.com/jasonbellamy/jekyll-mermaid)
