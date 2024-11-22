@@ -43,6 +43,7 @@ plugins:
   - jekyll-paginate
   - jekyll-archives
   - jekyll-seo-tag
+  - jekyll-mermaid
 
 jekyll-archives:
   enabled: 
@@ -60,10 +61,14 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+
 # highlighter: rouge
 
 paginate: 5   # 每页显示的文章数量
 paginate_path: "/page:num/"  # 分页路径，:num 会被页码替换
+
+mermaid:
+  src: 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js'
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

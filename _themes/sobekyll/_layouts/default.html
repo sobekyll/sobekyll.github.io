@@ -4,39 +4,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>{{ page.title | default: site.title }}</title>
   {% if site.logo %}
   <link rel="icon" href="{{ site.logo | absolute_url }}" type="image/*">
   {% endif %}
 
   {% if site.googleSiteVerification %}
-    <meta name="google-site-verification" content="{{ site.googleSiteVerification }}" />
+  <meta name="google-site-verification" content="{{ site.googleSiteVerification }}" />
   {% endif %}
-  {% if (site.bingSiteVerification) %}
-      <meta name="msvalidate.01" content="{{ site.bingSiteVerification }}" />
+  {% if site.bingSiteVerification %}
+  <meta name="msvalidate.01" content="{{ site.bingSiteVerification }}" />
   {% endif %}
 
   {% seo %}
 
-  <link rel="stylesheet" href="{% if site.theme_assets %}{{ site.theme_assets | absolute_url }}/css/style.css{% else %}{{ '/assets/css/style.css' | absolute_url }}{% endif %}">
-  <link rel="stylesheet" href="{% if site.theme_assets %}{{ site.theme_assets | absolute_url }}/css/rouge-github-auto.css{% else %}{{ '/assets/css/rouge-github-auto.css' | relative_url }}{% endif %}">
-  <link rel="stylesheet" href="{% if site.theme_assets %}{{ site.theme_assets | absolute_url }}/css/github-markdown.css{% else %}{{ '/assets/css/github-markdown.css' | relative_url }}{% endif %}">
+  <link rel="stylesheet"
+    href="{% if site.theme_assets %}{{ site.theme_assets | absolute_url }}/css/style.css{% else %}{{ '/assets/css/style.css' | absolute_url }}{% endif %}">
+  <link rel="stylesheet"
+    href="{% if site.theme_assets %}{{ site.theme_assets | absolute_url }}/css/rouge-github-auto.css{% else %}{{ '/assets/css/rouge-github-auto.css' | relative_url }}{% endif %}">
+  <link rel="stylesheet"
+    href="{% if site.theme_assets %}{{ site.theme_assets | absolute_url }}/css/github-markdown.css{% else %}{{ '/assets/css/github-markdown.css' | relative_url }}{% endif %}">
 
   <script src="https://unpkg.com/sober@0.6.8/dist/sober.min.js"></script>
 
-  <script src="{% if site.theme_assets %}{{ site.theme_assets | absolute_url }}/js/sobekyll.js{% else %}{{ '/assets/js/sobekyll.js' | relative_url }}{% endif %}"></script>
+  <script
+    src="{% if site.theme_assets %}{{ site.theme_assets | absolute_url }}/js/sobekyll.js{% else %}{{ '/assets/js/sobekyll.js' | relative_url }}{% endif %}"></script>
 
   {% if site.googleAnalytics %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.googleAnalytics }}"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-  
-      gtag('config', "{{ site.googleAnalytics }}");
-    </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.googleAnalytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', "{{ site.googleAnalytics }}");
+  </script>
   {% endif %}
+
 </head>
 
 <body>

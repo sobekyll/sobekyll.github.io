@@ -46,3 +46,4 @@ gem 'rouge'
 gem "jekyll-paginate", "~> 1.1.0"
 gem 'jekyll-archives'
 gem 'jekyll-seo-tag'
+gem 'jekyll-mermaid'
