@@ -1,1 +1,1 @@
-gem push sobekyll-0.2.7.gem
+gem push sobekyll-0.2.8.gem
