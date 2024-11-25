@@ -1,4 +1,7 @@
 ## Sobekyll
+
+**SobeKyll** is a Material Design-inspired [Jekyll](https://jekyllrb.com/) theme developed based on [SoberJS](https://soberjs.com/).
+
 <img src="./preview.png" width="320">
 
 ## Showcases
@@ -6,8 +9,6 @@
 [boybeak.github.io](https://boybeak.github.io/)
 
 [sobekyll.github.io](https://sobekyll.github.io/)
-
-**SobeKyll** is a Material Design-inspired [Jekyll](https://jekyllrb.com/) theme developed based on [SoberJS](https://soberjs.com/).
 
 ## Installation
 ### Using with GitHub Pages
