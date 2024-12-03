@@ -30,7 +30,7 @@ layout: default
       {% assign page_link = page_link | append: 'page' | append: page %}
     {% endif %}
     {% if page == paginator.page %}
-    <span style="margin: 8px; font-weight: bolder;">{{ page }}</span>
+    <span style="margin: 8px; font-weight: bolder; text-decoration: underline;">{{ page }}</span>
     {% else %}
     <s-ripple style="border-radius: 4px;" onclick="selfOpen('{{ page_link }}')">
       <span style="margin: 8px;">{{ page }}</span>
